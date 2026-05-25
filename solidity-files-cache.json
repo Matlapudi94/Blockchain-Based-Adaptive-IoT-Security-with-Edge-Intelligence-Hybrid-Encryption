@@ -1,0 +1,41 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\Blockchain project\\blockchain\\contracts\\AdaptiveSecurityAudit.sol": {
+      "lastModificationDate": 1777111298922,
+      "contentHash": "13b8e71e6ac8201f90dcbe3804808089",
+      "sourceName": "contracts/AdaptiveSecurityAudit.sol",
+      "solcConfig": {
+        "version": "0.8.24",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "AdaptiveSecurityAudit"
+      ]
+    }
+  }
+}

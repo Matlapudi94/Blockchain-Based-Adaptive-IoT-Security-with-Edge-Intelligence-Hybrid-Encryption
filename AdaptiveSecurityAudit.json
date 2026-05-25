@@ -1,0 +1,368 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "deviceKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "AccessGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "deviceKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "AccessRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "storageRef",
+        "type": "string"
+      }
+    ],
+    "name": "DecisionLogged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "hashValue",
+        "type": "string"
+      }
+    ],
+    "name": "HashLogged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "classification",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "encryptionMode",
+        "type": "string"
+      }
+    ],
+    "name": "PolicyValidated",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "deviceKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "authorizeAccess",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getDecision",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "dataId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "classification",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "encryptionMode",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "storageRef",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "storageKind",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "timestamp",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getHash",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "deviceKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "grantAccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "dataId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "deviceId",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "classification",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "encryptionMode",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "storageRef",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "storageKind",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "timestamp",
+        "type": "string"
+      }
+    ],
+    "name": "logDecision",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "dataKey",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "hashValue",
+        "type": "string"
+      }
+    ],
+    "name": "logHash",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "deviceKey",
+        "type": "bytes32"
+      }
+    ],
+    "name": "revokeAccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "classification",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "encryptionMode",
+        "type": "string"
+      },
+      {
+        "internalType": "bool",
+        "name": "allowed",
+        "type": "bool"
+      }
+    ],
+    "name": "setPolicy",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "classification",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "encryptionMode",
+        "type": "string"
+      }
+    ],
+    "name": "validateDecision",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
